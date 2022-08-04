@@ -1,0 +1,18 @@
+{
+    "motd": {
+        "msg": "If you or your company use this project or like what we doing, please consider backing us so we can continue maintaining and evolving this project.",
+        "url": "https://exchangerate.host/#/donate"
+    },
+    "success": true,
+    "query": {
+        "from": "NGN",
+        "to": "ILS",
+        "amount": 1
+    },
+    "info": {
+        "rate": 0.008066
+    },
+    "historical": false,
+    "date": "2022-08-04",
+    "result": 0.008066
+},
