@@ -6,4 +6,6 @@ The initial process [extract_and_queue] calls an API to extract data then queues
 
 I currently have issues controlling the consume process as I need it to timeout after n seconds but it ignores my commands and runs then eventually terminates itself due to inactivity.
 
+Next, I will be using github actions to schedule the process to run daily.
+
 This is a beta implementation as I intend to improve on teh process with time.
