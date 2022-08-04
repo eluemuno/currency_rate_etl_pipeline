@@ -37,20 +37,20 @@ channel.basic_consume(on_message_callback=callback, queue='nsukka', auto_ack=Fal
 # channel.basic_consume(callback=callback, queue='nsukka', no_ack=True)
 
 
-def stop_consuming():
-    import subprocess
-    import signal
-    import os
-    file_name = str(__file__).split('/')[-1]
-    process_list = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
-    output, error = process_list.communicate()
-    for line in output.splitlines():
-        line = bytes.decode(line)
-        if 'python' in line and file_name in line:
-            pid = int(line.split(None, 1)[0])
-            logging.info('Initiating kill command on : {}'.format(pid))
-            os.kill(pid, signal.SIGKILL)
-        return
+# def stop_consuming():
+#     import subprocess
+#     import signal
+#     import os
+#     file_name = str(__file__).split('/')[-1]
+#     process_list = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
+#     output, error = process_list.communicate()
+#     for line in output.splitlines():
+#         line = bytes.decode(line)
+#         if 'python' in line and file_name in line:
+#             pid = int(line.split(None, 1)[0])
+#             logging.info('Initiating kill command on : {}'.format(pid))
+#             os.kill(pid, signal.SIGKILL)
+#         return
 
 
 # channel.start_consuming()
